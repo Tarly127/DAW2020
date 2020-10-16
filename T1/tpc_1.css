@@ -1,0 +1,47 @@
+titulo_galochas {
+  color: red;
+}
+
+h1 {
+  font-family: "Helvetica";
+  color: black;
+}
+
+body {
+  background-color:ghostwhite;
+}
+
+.introducao {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.indice {
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.other_blocks {
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.galochas_img {
+  width: 230px;
+  height: 230px;
+}
+
+.quote {
+  display: block;
+  margin-top:30px;
+  margin-bottom:30px;
+  margin-left:50px;
+  margin-right:50px;
+  border: solid;
+  border-color: darkblue;
+  text-align:center;
+}
