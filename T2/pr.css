@@ -1,0 +1,23 @@
+/* Blocos principais */
+title, header, team, abstract, deliverables, date {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom-style: groove;
+    border-top-style: groove;
+}
+
+/* Alterações do texto */
+bold  { font-weight: bold; }
+ital  { font-style: italic; }
+under { text-decoration: underline; }
+
+/* Elementos do HEADER */
+
+key_name, h_title, h_subtitle {
+    float: right;
+}
+
+begin_date, end_date, supervisor {
+    float: left;
+}
