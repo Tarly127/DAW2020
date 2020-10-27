@@ -3,27 +3,33 @@
 
 <!ELEMENT record (title, header, team, abstract, deliverables, date?) >
 
-<!-- Elemento do PROJECT RECORD (só diz mesmo "project record") -->
+<!-- Elemento do PROJECT RECORD (só diz mesmo "project record", em bold, mas deverá ser texto centrado) -->
 <!ELEMENT title (#PCDATA) >
 
 <!-- Primeiro elemento com conteúdo, referente a nome do projeto, supervisor, data de início, etc. -->
 <!ELEMENT header (key_name, h_title, h_subtitle?, begin_date, end_date, supervisor) >
 
-<!ELEMENT key_name   (bold, word) >
-<!ELEMENT h_title    (bold, word) >
-<!ELEMENT h_subtitle (bold, word) >
-<!ELEMENT begin_date (bold, word) >
-<!ELEMENT end_date   (bold, word) >
-<!ELEMENT supervisor (#PCDATA) > <!-- Falta aqui mais qualquer coisa? -->
+<!ELEMENT key_name   (bold, string) >
+<!ELEMENT h_title    (bold, string) >
+<!ELEMENT h_subtitle (bold, string) >
+<!ELEMENT begin_date (bold, string) >
+<!ELEMENT end_date   (bold, string) >
+<!ELEMENT supervisor (bold, ref) >
 
-<!ATTLIST supervisor
-    ref CDATA #REQUIRED >
+
+<!ELEMENT ref (#PCDATA) >
+<!ATTLIST ref
+    link CDATA #REQUIRED >
+
 
 <!-- String genérica que não precisa de formatação -->
 <!ELEMENT string (#PCDATA) >
 
+<!-- Título de um bloco (vai ser sempre bold, mas distingo do bold para poder facilitar a aplicação das margens) -->
+<!ELEMENT block_title (#PCDATA) >
+
 <!-- Definição dos elementos da equipa de trabalho (máx 3 elems) -->
-<!ELEMENT team (teammate, teammate?, teammate?) >
+<!ELEMENT team (block_title, teammate, teammate?, teammate?) >
 
 <!ELEMENT teammate (teammate_name, teammate_number, teammate_email, teammate_website?) >
 
@@ -33,9 +39,10 @@
 <!ELEMENT teammate_website (#PCDATA) >
 
 <!-- Definição do bloco abstract, que consiste num resumo do projeto -->
-<!ELEMENT abstract (par)+ >
+<!ELEMENT abstract (block_title,par+) >
 
-<!ELEMENT par (ital|bold|under|link|string)+ >
+<!-- Uma "lista" com #PCDATA tem de ser * e nunca + -->
+<!ELEMENT par (#PCDATA|ital|bold|under|link)* >
 
 <!ELEMENT ital  (#PCDATA) >
 <!ELEMENT bold  (#PCDATA) >
@@ -43,11 +50,7 @@
 <!ELEMENT link  (#PCDATA) >
 
 <!-- Definição do bloco Deliverables, onde temos os vários documentos associados  -->
-<!ELEMENT deliverables (deliverable)+ >
-
-<!ELEMENT deliverable (#PCDATA) >
-<!ATTLIST deliverable
-    ref CDATA #REQUIRED >
+<!ELEMENT deliverables (block_title,ref+) >
 
 <!-- Data -->
 <!ELEMENT date (#PCDATA) >
