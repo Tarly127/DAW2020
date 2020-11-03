@@ -63,8 +63,7 @@
     <!-- Temlpates dos items do ARQELEMS -->
     <xsl:template match="IMAGEM">
         <!-- Problema aqui -->
-        <xsl:variable name="source" select="@NOME"/>
-        <img src="$source" alt="Image not available"/>
+        <img src="../images/{@NOME}" alt="Image not available"/>
     </xsl:template>
     
     <xsl:template match="IDENTI">
@@ -72,7 +71,7 @@
     </xsl:template>
     
     <xsl:template match="DESCRI">
-        <p><b>Descrição: </b><xsl:apply-templates/></p>
+        <p style="margin-top:40px"><b>Descrição: </b><xsl:apply-templates/></p>
     </xsl:template>
     
     <xsl:template match="LUGAR">
@@ -145,7 +144,7 @@
     
     <xsl:template match="LIGA">
         <span style="color:red;">
-            <xsl:value-of select="."/>
+            <u><xsl:value-of select="."/></u>
         </span>
     </xsl:template>
 </xsl:stylesheet>
