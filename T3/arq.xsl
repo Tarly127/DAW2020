@@ -62,7 +62,6 @@
     
     <!-- Temlpates dos items do ARQELEMS -->
     <xsl:template match="IMAGEM">
-        <!-- Problema aqui -->
         <img src="../images/{@NOME}" alt="Image not available"/>
     </xsl:template>
     
@@ -88,6 +87,10 @@
     
     <xsl:template match="QUADRO">
         <p><b>Quadro: </b><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="TIPO">
+        <p style="color:grey;font-size:15px"><b>Tipo: </b><xsl:value-of select="@ASSUNTO"/></p>
     </xsl:template>
    
     <xsl:template match="TRAARQ">
