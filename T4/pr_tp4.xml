@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../../../Aulas/Aula_4/pr.dtd">
+<pr>
+    <meta>
+        <key>daw_tpc4_elc_2020</key>
+        <tit>Site com servidor NodeJS</tit>
+        <b_date>8/11/2020</b_date>
+        <e_date>10/11/2020</e_date>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="ll4_1nx_pnb">
+            <name>Eduardo Lourenço da Conceição</name>
+            <email>A83870@alunos.uminho.pt</email>
+            <link url="https://github.com/Tarly127">github.com/Tarly127</link>
+        </member>
+    </team>
+    <abstract>
+        <p>
+            Para o quarto trabalho de casa da cadeira de Desenvolvimento de Aplicações WEB, foi-nos dada a tarefa de produzir 
+            um site para o <i>dataset</i> de arqueossítios do noroeste de Portugal. Este trabalho pode ser dividido em duas tarefas:
+            em primeiro, é necessário <b>alterar o XSLT produzido no trabalho de casa anterior</b> e, em segundo, <b>implementar um servidor
+            em Javascript, com NodeJS, que possa responder a pedidos no <i>localhost</i></b>.
+        </p>
+        
+        <p>
+            Quanto às alterações necessárias no XSLT, estas são diminutas. Apenas foi necessário alterar a geração do título de cada ficheiro 
+            <i>output</i>, de forma a que os nomes produzidos contenham um número único e sequencial, e, além disto, alterar as referências de modo
+            a gerar os URLs necessários no <i>browser</i>.
+        </p>
+        
+        <p>
+            Por fim, no que toca à criação de um servidor, este tem uma implementação muito semelhante ao produzido nas aulas. Este servidor vai ter
+            carregar cada ficheiro que contém a informação de um arqueossítio, bem como o ficheiro <i>index.html</i>. Para isto, apenas é necessário
+            ler o URL, ler o ficheiro pedido e, por fim, demonstrá-lo no <i>browser</i>.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="arq.xsl">XSLT do Dataset Arq-Sits Atualizado</link>
+        <link url="server.js">Servidor implementado em NodeJS</link>
+        <link url="my_site">Output do XSLT</link>
+    </deliverables>
+</pr>
