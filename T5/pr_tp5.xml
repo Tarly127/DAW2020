@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../../../Aulas/Aula_4/pr.dtd">
+<pr>
+    <meta>
+        <key>daw_tpc5_elc_2020</key>
+        <tit>Servidor NodeJS e JSON-Server</tit>
+        <b_date>16/11/2020</b_date>
+        <e_date>17/11/2020</e_date>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="ll4_1nx_pnb">
+            <name>Eduardo Lourenço da Conceição</name>
+            <email>A83870@alunos.uminho.pt</email>
+            <link url="https://github.com/Tarly127">github.com/Tarly127</link>
+        </member>
+    </team>
+    <abstract>
+        <p>
+            Para o quinto trabalho de casa da cadeira de Desenvolvimento de Aplicações Web, foi necessário <b>criar um servidor em Javascript</b>, utilizando o <i>Axios</i>, que responderia a pedidos em <i>localhost</i> a uma Base de Dados mantida pelo JSON-Server, relativa a uma escola de música-
+        </p>
+
+        <p>
+            Para a manutenção da Base de Dados, apenas é necessário ligar o JSON-Server, que irá observar pedidos a essa mesma BD, e responderá com a informação necessária. Este passo é trivial e não requer qualquer tipo de criação de código da nossa parte.
+        </p>
+
+        <p>
+            A tarefa menos trivial, no entanto, é a criação do servidor NodeJS. Este deverá escutar o <i>localhost</i> na porta 4000, e responder a sete tipos de pedidos. Estes são os acessos aos items "aluno", "curso" e "instrumento", às listas "alunos", "cursos" e "instrumentos", bem como a um simples índice que nos leva às três listas.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="db.json">Base de Dados JSON sobre a Escola de Música</link>
+        <link url="server.js">Servidor implementado em NodeJS</link>
+    </deliverables>
+</pr>
