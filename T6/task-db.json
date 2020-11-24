@@ -1,0 +1,31 @@
+{
+  "tasks": [
+    {
+      "dateCreated": "2020-11-24",
+      "dateDue": "2020-11-24T22:56",
+      "who": "Eduardo Lourenço da Conceição",
+      "what": "Entregar este TPC de DAW",
+      "type": "TPC_DAW",
+      "done": "true",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "dateCreated": "2020-11-24",
+      "dateDue": "2020-12-02",
+      "who": "Eduardo Lourenço da Conceição",
+      "what": "Próximo TPC de DAW",
+      "type": "TPC_DAW",
+      "done": "false"
+    },
+    {
+      "id": "3",
+      "dateCreated": "2020-11-24",
+      "dateDue": "2020-12-28",
+      "who": "Júlio Agostinho",
+      "what": "Faz anos.",
+      "type": "Aniv",
+      "done": "false"
+    }
+  ]
+}
