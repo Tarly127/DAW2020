@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../../../Aulas/Aula_4/pr.dtd">
+<pr>
+    <meta>
+        <key>daw_tpc6_elc_2020</key>
+        <tit>Single Page Application para Gerir Tarefas</tit>
+        <b_date>22/11/2020</b_date>
+        <e_date>24/11/2020</e_date>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="ll4_1nx_pnb">
+            <name>Eduardo Lourenço da Conceição</name>
+            <email>A83870@alunos.uminho.pt</email>
+            <link url="https://github.com/Tarly127">github.com/Tarly127</link>
+        </member>
+    </team>
+    <abstract>
+        <p>
+            No trabalho de casa da sexta semana da cadeira de DAW, foi necessário criar uma <i>Single Page Application</i> para um gestor de tarefas, que terá a possbilidade de
+            criar tarefas, visualizar as tarefas por acabar e acabadas, bem como editar tarefas, apagar tarefas e completar tarefas. Para isto, utilizei o <i>json-server</i>,
+            de modo a podermos guardar as tarefas em questão numa Base de Dados JSON.
+        </p>
+        <p>
+            Para poder tratar dos pedidos do <i>localhost</i>, utilizei um servidor em NodeJS, que irá responder a pedidos de 4 tipos: GET, POST, PUT e DELETE. Estes métodos são
+            chamados pelo utilizador através de formulários, sendo que estes são processados num simples <i>switch</i>. É de notar que, como <b>HTML não suporta DELETE ou PUT</b>,
+            foi necessário incorporar estes métodos no GET e no POST, de modo a poder obter o mesmo tipo de resultados. Assim, ao servidor NodeJS são enviados apenas pedidos POST 
+            e GET, mas este envia os quatro tipos de pedido ao <i>json-server</i>.
+        </p>
+        <p>
+            Apesar desta solução permitir resolver a maior parte dos problemas, acaba por tratar de forma incorreta o URL, que não age como seria completamente esperado. Mais ainda,
+            existe um pequeno <i>bug</i>, que se revela quando apagamos várias tarefas concluídas, em que o documento CSS que serve de <i>stylesheet</i> para o HTML não é carregado,
+            fazendo com que a página apresente a formatação errada.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="task-db.json">Base de Dados JSON sobre as Tarefas</link>
+        <link url="task-server.js">Servidor implementado em NodeJS</link>
+        <link url="package.json">Documento de Configuração do Projeto NPM</link>
+        <link url="static.js">Handler de Recursos Estáticos desenvolvido na aula</link>
+        <link url="public/favicon.png">Favicon personalizado</link>
+    </deliverables>
+</pr>
