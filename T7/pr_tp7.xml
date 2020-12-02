@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../../../Aulas/Aula_4/pr.dtd">
+<pr>
+    <meta>
+        <key>daw_tpc7_elc_2020</key>
+        <tit>Servidor Express e MongoDB</tit>
+        <b_date>1/12/2020</b_date>
+        <e_date>2/12/2020</e_date>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="ll4_1nx_pnb">
+            <name>Eduardo Lourenço da Conceição</name>
+            <email>A83870@alunos.uminho.pt</email>
+            <link url="https://github.com/Tarly127">github.com/Tarly127</link>
+        </member>
+    </team>
+    <abstract>
+        <p>
+            Neste sétimo trabalho de casa da cadeira de DAW, foi-nos incumbida a tarefa de implementar um pequeno <i>website</i> para a gestão
+            dos alunos de DAW, utilizando <b>MongoDB</b> para a Base de Dados e <b>Express</b> para implementar a aplicação web em si. Deste modo,
+            o importante seria utilizar o servidor criado nas aulas e expandir sobre ele.
+        </p>
+        <p>
+            No que toca à própria aplicação, a sua tem vários requisitos aos quais terá de responder: deverá haver uma lista de alunos, uma página para
+            cada aluno, para a edição dos seus dados, para o registo de um novo aluno e, por fim, para a sua deleção (esta eu entendi por bem juntar à
+            própria página do aluno). Para isto foi necessário criar <i>views</i> para cada um destes elementos. Algo que eu acho ser merecedor de destaque
+            é que, na lista dos trabalhos de casa entregues por cada aluno, podemos aceder ao link do repositório do Github do aluno onde se encontra o TPC.
+        </p>
+            A ligação à Base de Dados é algo relativamente trivial, e é feita utilizando o <b>Mongoose</b>, sendo que os pedidos feitos através do URL são
+            redirecionados para o MongoDB com o Mongoose com promessas, sendo que o MongoDB mais tarde executa-os, de modo a responder às <i>queries</i> do
+            utilizador.
+        <p>
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="studentsApp/">Implementação da Aplicação Web</link>
+    </deliverables>
+</pr>

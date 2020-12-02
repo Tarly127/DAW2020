@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3.w3-left Edit #{std.nome}
+      form(class="w3-container" action="/students/update/"+std.numero method="POST")
+        label(class="w3-text-teal") <b>Name:</b>
+            input(class="w3-input w3-border w3-light-grey" type="text" name="nome" value=std.nome)
+        label(class="w3-text-teal") <b>Number:</b>
+            input(class="w3-input w3-border w3-light-grey" type="text" name="numero" value=std.numero)
+        label(class="w3-text-teal") <b>GitHub Link:</b>
+            input(class="w3-input w3-border w3-light-grey" type="text" name="git" value=std.git)
+        label(class="w3-text-teal") <b>Delivered Homework:</b>
+            br
+        -for(let i = 0; i < 8; i++)
+            label(class="checkbox-inline")
+                if std.tpc[i] == 1
+                    input(type='checkbox' name='tp'+i checked) 
+                else
+                    input(type='checkbox' name='tp'+i)
+                b.w3-text-black TPC#{i+1}
+                    br
+        input(class="w3-btn w3-green" style="margin:30px" type="submit" value="Save Changes")
+        input(class="w3-btn w3-grey" style="margin:30px" type="reset" value="Reset")
+
+
+      footer.w3-container.w3-teal
+        address Gerado por studentsApp::DAW2020
+        a(href="/students") Voltar à Home

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3.w3-left Register a Student
+      form(class="w3-container" action="/students/" method="POST")
+        label(class="w3-text-teal") <b>Name:</b>
+            input(class="w3-input w3-border w3-light-grey" type="text" name="nome")
+        label(class="w3-text-teal") <b>Number:</b>
+            input(class="w3-input w3-border w3-light-grey" type="text" name="numero")
+        label(class="w3-text-teal") <b>GitHub Link:</b>
+            input(class="w3-input w3-border w3-light-grey" type="text" name="git")
+        input(type="hidden" name="tpc" value="{0,0,0,0,0,0,0,0}")
+        input(class="w3-btn w3-green" style="margin:30px" type="submit" value="Create")
+        input(class="w3-btn w3-grey" style="margin:30px" type="reset" value="Reset")
+
+
+      footer.w3-container.w3-teal
+        address Gerado por studentsApp::DAW2020
+        a(href="/students") Voltar à Home
