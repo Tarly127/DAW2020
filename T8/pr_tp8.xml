@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "../../../Aulas/Aula_4/pr.dtd">
+<pr>
+    <meta>
+        <key>daw_tpc8_elc_2020</key>
+        <tit>Submissão de Múltiplos Ficheiros em HTML</tit>
+        <b_date>8/12/2020</b_date>
+        <e_date>8/12/2020</e_date>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="ll4_1nx_pnb">
+            <name>Eduardo Lourenço da Conceição</name>
+            <email>A83870@alunos.uminho.pt</email>
+            <link url="https://github.com/Tarly127">github.com/Tarly127</link>
+        </member>
+    </team>
+    <abstract>
+        <p>
+            Para o último trabalho de casa de Desenvolvimento de Aplicações WEB, foi necessário aumentar as <i>features</i> do serviço de
+            submissão de ficheiros feito na última aula prática, de modo a este aceitar a submissão de vários ficheiros ao mesmo tempo.
+        </p>
+        <p>
+            Esta tarefa provou ser relativamente fácil. Primeiro foi preciso implementar um pequeno <i>script</i>, <b>addForm</b>, que, utilizando
+            <b>JQuery</b>, permite adicionar mais um formulário de submissão ao DOM, e utilizar este quando o utilizador carrega num certo botão.
+            O mais complexo é, depois, a submissão, visto que passamos a ter de tratar de um <i>array</i> de ficheiros em vez de um ficheiro apenas,
+            e para isso temos de o percorrer e guardar cada ficheiro individualmente.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="upload-many.js">Servidor em Javascript</link>
+        <link url="dbFiles.js">Base de Dados das Imagens</link>
+        <link url="html-templates.js">Templates das Páginas a Gerar pelo Servidor</link>
+        <link url="/public/addForm.js">Script para adicionar um formulário</link>
+    </deliverables>
+</pr>
